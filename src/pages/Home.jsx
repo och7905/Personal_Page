@@ -7,7 +7,7 @@ function Home() {
             {/* Hero Section */}
             <section className="section flex-center" style={{ minHeight: '80vh', textAlign: 'center', flexDirection: 'column' }}>
                 <div className="container">
-                    <h1 className="h1">Hello, I'm Oh Chang Hyeon</h1>
+                    <h1 className="h1">안녕하세요 오창현입니다.</h1>
                     <h2 className="h2" style={{ marginBottom: 'var(--spacing-lg)' }}>Developer & Creator</h2>
                     <p className="text-body" style={{ margin: '0 auto var(--spacing-lg) auto' }}>
                         I build modern, scalable web applications and explore new technologies.
