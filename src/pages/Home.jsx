@@ -63,8 +63,8 @@ function Home() {
 
             {/* 1. Hero Section */}
             <section className="hero-section flex-center" id="hero">
-                <div className="hero-content text-center">
-                    <h1 className="hero-title font-bold" style={{ fontSize: '3.5rem', letterSpacing: '-1px', lineHeight: '1.4' }} dangerouslySetInnerHTML={{ __html: t('hero.title') }} />
+                <div className="hero-content text-center container">
+                    <h1 className="hero-title font-bold h1" style={{ letterSpacing: '-1px', lineHeight: '1.4' }} dangerouslySetInnerHTML={{ __html: t('hero.title') }} />
                     <div className="hero-subtitle mt-xl" style={{ fontSize: '1.1rem', lineHeight: '1.8', letterSpacing: '-0.5px' }} dangerouslySetInnerHTML={{ __html: t('hero.subtitle') }} />
                     <button className="hero-btn mt-xl" onClick={() => scrollToSection('about')} style={{ backgroundColor: '#F1694B', color: 'white', borderRadius: '30px', padding: '12px 32px', fontSize: '1rem' }}>
                         {t('hero.button')} <ChevronDown size={18} style={{ display: 'inline', verticalAlign: 'middle', marginLeft: '4px' }} />
@@ -75,7 +75,7 @@ function Home() {
             {/* 2. ABOUT ME Section */}
             <section className="page-section bg-white" id="about">
                 <div className="container">
-                    <h2 className="section-title text-center"><Link2 className="title-icon" /> {t('about.title')}</h2>
+                    <h2 className="section-title text-center h2"><Link2 className="title-icon" /> {t('about.title')}</h2>
                     <div className="about-grid mt-xl">
                         <div className="about-item flex-center">
                             <User className="about-icon" />
@@ -226,7 +226,7 @@ function Home() {
             {/* 6. EXPERIENCE Section */}
             <section className="page-section bg-light border-top" id="career">
                 <div className="container">
-                    <h2 className="section-title text-center"><Link2 className="title-icon" /> {t('career.title')}</h2>
+                    <h2 className="section-title text-center h2"><Link2 className="title-icon" /> {t('career.title')}</h2>
 
                     <div className="career-container mt-xl" style={{ borderLeft: '3px solid #333', paddingLeft: '3rem', position: 'relative' }}>
 
