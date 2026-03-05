@@ -43,27 +43,23 @@ function Home() {
                 </div>
             </section>
 
-            {/* Social Links Section */}
-            <section className="section">
-                <div className="container" style={{ maxWidth: '400px', margin: '0 auto' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)' }}>
-                        <a href="https://github.com/och7905" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-md)', padding: 'var(--spacing-md)', borderRadius: 'var(--radius-md)', backgroundColor: 'var(--bg-surface)', textDecoration: 'none', color: 'inherit', transition: 'transform 0.2s', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-                            <Github size={32} color="#333" />
-                            <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Github</span>
-                        </a>
+            {/* Floating Social Links - Bottom Left */}
+            <div style={{ position: 'fixed', bottom: '30px', left: '30px', zIndex: 50, display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                <a href="https://github.com/och7905" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 16px', borderRadius: 'var(--radius-md)', backgroundColor: 'var(--bg-surface)', textDecoration: 'none', color: 'inherit', transition: 'all 0.2s', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)'; }}>
+                    <Github size={24} color="#333" />
+                    <span style={{ fontSize: '1rem', fontWeight: 'bold' }}>Github</span>
+                </a>
 
-                        <a href="https://layerlog.tistory.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-md)', padding: 'var(--spacing-md)', borderRadius: 'var(--radius-md)', backgroundColor: 'var(--bg-surface)', textDecoration: 'none', color: 'inherit', transition: 'transform 0.2s', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-                            <TistoryIcon size={32} />
-                            <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Tistory Blog</span>
-                        </a>
+                <a href="https://layerlog.tistory.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 16px', borderRadius: 'var(--radius-md)', backgroundColor: 'var(--bg-surface)', textDecoration: 'none', color: 'inherit', transition: 'all 0.2s', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)'; }}>
+                    <TistoryIcon size={24} />
+                    <span style={{ fontSize: '1rem', fontWeight: 'bold' }}>Tistory Blog</span>
+                </a>
 
-                        <a href="https://open.kakao.com" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-md)', padding: 'var(--spacing-md)', borderRadius: 'var(--radius-md)', backgroundColor: 'var(--bg-surface)', textDecoration: 'none', color: 'inherit', transition: 'transform 0.2s', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-                            <KakaoIcon size={32} />
-                            <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>Open Kakao</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
+                <a href="https://open.kakao.com" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 16px', borderRadius: 'var(--radius-md)', backgroundColor: 'var(--bg-surface)', textDecoration: 'none', color: 'inherit', transition: 'all 0.2s', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)'; }}>
+                    <KakaoIcon size={24} />
+                    <span style={{ fontSize: '1rem', fontWeight: 'bold' }}>Open Kakao</span>
+                </a>
+            </div>
 
             {/* Quick Skills / Services Section */}
             <section className="section" style={{ backgroundColor: 'var(--bg-surface)' }}>
