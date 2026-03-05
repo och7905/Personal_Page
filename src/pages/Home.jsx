@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { User, Calendar, MapPin, Phone, Mail, GraduationCap, Link2, ChevronDown, ArrowUp } from 'lucide-react';
+import { User, Calendar, MapPin, Phone, Mail, GraduationCap, Link2, ChevronDown, ArrowUp, Github, BookOpen } from 'lucide-react';
 
 function Home() {
     const scrollToSection = (id) => {
@@ -14,13 +14,15 @@ function Home() {
             {/* 1. Hero Section */}
             <section className="hero-section flex-center" id="hero">
                 <div className="hero-content text-center">
-                    <h1 className="hero-title">- 오창현 -<br />개발자가 되고 싶은
-                        포트폴리오</h1>
-                    <div className="hero-subtitle">
-                        <p>안녕하세요.</p>
-                        <p>자기소개란<br />오창현입니다.</p>
+                    <h1 className="hero-title font-bold" style={{ fontSize: '3.5rem', letterSpacing: '-1px', lineHeight: '1.4' }}>
+                        - 오창현 -<br />개발자가 되고 싶은 포트폴리오
+                    </h1>
+                    <div className="hero-subtitle mt-xl" style={{ fontSize: '1.1rem', lineHeight: '1.8', letterSpacing: '-0.5px' }}>
+                        안녕하세요.<br />
+                        자기소개란<br />
+                        오창현입니다.
                     </div>
-                    <button className="hero-btn mt-lg" onClick={() => scrollToSection('about')}>
+                    <button className="hero-btn mt-xl" onClick={() => scrollToSection('about')} style={{ backgroundColor: '#F1694B', color: 'white', borderRadius: '30px', padding: '12px 32px', fontSize: '1rem' }}>
                         더 알아보기 <ChevronDown size={18} style={{ display: 'inline', verticalAlign: 'middle', marginLeft: '4px' }} />
                     </button>
                 </div>
@@ -69,7 +71,7 @@ function Home() {
                         <div className="about-item flex-center">
                             <GraduationCap className="about-icon" />
                             <div className="about-info">
-                                <span className="about-label">학력</span>
+                                <span className="about-label">최종학력</span>
                                 <span className="about-value">대전대학교<br />(컴퓨터공학)</span>
                             </div>
                         </div>
@@ -83,17 +85,17 @@ function Home() {
                 <div className="container">
                     <h2 className="section-title text-center"><Link2 className="title-icon" /> SKILLS</h2>
                     <div className="skills-container card mt-xl">
-                        <div className="skill-row border-bottom flex-center">
-                            <div className="skill-category">Language</div>
-                            <div className="skill-tags">
+                        <div className="skill-row border-bottom flex-start">
+                            <div className="skill-category">💻 Language</div>
+                            <div className="skill-tags mt-xs">
                                 <span className="skill-tag" style={{ backgroundColor: '#3178C6', color: 'white' }}>테스트 언어 1</span>
                                 <span className="skill-tag" style={{ backgroundColor: '#F7DF1E', color: 'black' }}>테스트 언어 2</span>
                                 <span className="skill-tag" style={{ backgroundColor: '#3776AB', color: 'white' }}>테스트 언어 3</span>
                             </div>
                         </div>
-                        <div className="skill-row border-bottom flex-center">
-                            <div className="skill-category">Frontend</div>
-                            <div className="skill-tags">
+                        <div className="skill-row border-bottom flex-start">
+                            <div className="skill-category">🖥️ Frontend</div>
+                            <div className="skill-tags mt-xs">
                                 <span className="skill-tag bg-dark text-white">프론트 테스트 1</span>
                                 <span className="skill-tag bg-gray text-white">프론트 테스트 2</span>
                                 <span className="skill-tag" style={{ backgroundColor: '#3578E5', color: 'white' }}>프론트 테스트 3</span>
@@ -101,16 +103,16 @@ function Home() {
                                 <span className="skill-tag" style={{ backgroundColor: '#38B2AC', color: 'white' }}>프론트 테스트 5</span>
                             </div>
                         </div>
-                        <div className="skill-row border-bottom flex-center">
-                            <div className="skill-category">Backend</div>
-                            <div className="skill-tags">
+                        <div className="skill-row border-bottom flex-start">
+                            <div className="skill-category">💾 Backend</div>
+                            <div className="skill-tags mt-xs">
                                 <span className="skill-tag" style={{ backgroundColor: '#092E20', color: 'white' }}>백엔드 테스트 1</span>
                                 <span className="skill-tag" style={{ backgroundColor: '#6DB33F', color: 'white' }}>백엔드 테스트 2</span>
                             </div>
                         </div>
-                        <div className="skill-row flex-center border-none">
-                            <div className="skill-category">DevOps</div>
-                            <div className="skill-tags">
+                        <div className="skill-row flex-start border-none">
+                            <div className="skill-category">☁️ DevOps</div>
+                            <div className="skill-tags mt-xs">
                                 <span className="skill-tag" style={{ backgroundColor: '#2496ED', color: 'white' }}>데브옵스 1</span>
                                 <span className="skill-tag" style={{ backgroundColor: '#FF9900', color: 'white' }}>데브옵스 2</span>
                             </div>
@@ -124,16 +126,20 @@ function Home() {
                 <div className="container">
                     <h2 className="section-title text-center text-white"><Link2 className="title-icon text-white" /> ARCHIVING</h2>
                     <div className="archiving-grid mt-xl">
-                        <div className="archiving-card card bg-white text-dark text-center">
-                            <h3 className="archiving-title h2 font-bold mb-md">GitHub</h3>
-                            <a href="https://github.com/och7905" target="_blank" rel="noopener noreferrer" className="archiving-link">github.com/och7905</a>
-                            <p className="archiving-desc mt-sm text-secondary">소스 코드 저장소</p>
-                        </div>
-                        <div className="archiving-card card bg-white text-dark text-center">
-                            <h3 className="archiving-title h2 font-bold mb-md">Tistory Blog</h3>
-                            <a href="https://layerlog.tistory.com/" target="_blank" rel="noopener noreferrer" className="archiving-link">layerlog.tistory.com</a>
-                            <p className="archiving-desc mt-sm text-secondary">공부 및 지식 공유 목적의 블로그</p>
-                        </div>
+                        <a href="https://github.com/och7905" target="_blank" rel="noopener noreferrer" className="archiving-card card bg-white text-dark" style={{ textDecoration: 'none', display: 'block' }}>
+                            <div className="flex-start" style={{ alignItems: 'center', marginBottom: '1.5rem' }}>
+                                <Github size={48} style={{ marginRight: '16px', color: '#333' }} />
+                                <h3 className="archiving-title font-bold" style={{ fontSize: '2.5rem', margin: 0 }}>GitHub</h3>
+                            </div>
+                            <p className="archiving-desc text-secondary" style={{ margin: 0 }}>소스 코드 저장소</p>
+                        </a>
+                        <a href="https://layerlog.tistory.com/" target="_blank" rel="noopener noreferrer" className="archiving-card card bg-white text-dark" style={{ textDecoration: 'none', display: 'block' }}>
+                            <div className="flex-start" style={{ alignItems: 'center', marginBottom: '1.5rem' }}>
+                                <BookOpen size={48} style={{ marginRight: '16px', color: '#EB531F' }} />
+                                <h3 className="archiving-title font-bold" style={{ fontSize: '2.5rem', margin: 0 }}>Tistory Blog</h3>
+                            </div>
+                            <p className="archiving-desc text-secondary" style={{ margin: 0 }}>공부 및 지식 공유 목적의 블로그</p>
+                        </a>
                     </div>
                 </div>
             </section>

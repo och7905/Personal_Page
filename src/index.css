@@ -362,7 +362,11 @@ a:hover {
 /* 1. Hero Section */
 .hero-section {
   min-height: 100vh;
-  background-color: #79665B;
+  /* Dark overlay to make text readable with the image */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   position: relative;
   display: flex;
@@ -403,7 +407,7 @@ a:hover {
 /* 2. About Me */
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   max-width: 900px;
   margin: 3rem auto 0;
@@ -448,7 +452,7 @@ a:hover {
 .skills-container {
   background-color: #fff;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 3rem;
   max-width: 900px;
   margin: 3rem auto 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -462,12 +466,15 @@ a:hover {
 }
 
 .skill-category {
-  width: 150px;
+  width: 160px;
   font-weight: 800;
   font-size: 1.1rem;
   flex-shrink: 0;
   border-left: 4px solid #f1694b;
-  padding-left: 10px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .skill-tags {
