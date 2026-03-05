@@ -1,7 +1,31 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { User, Calendar, MapPin, Phone, Mail, GraduationCap, Link2, ChevronDown, ArrowUp, Github, BookOpen } from 'lucide-react';
 
 function Home() {
+    const [activeSection, setActiveSection] = useState('hero');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ['hero', 'about', 'skills', 'archiving', 'projects', 'career'];
+            let current = 'hero';
+            for (let i = 0; i < sections.length; i++) {
+                const element = document.getElementById(sections[i]);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    // if the top of the section is above the middle of the screen
+                    if (rect.top <= window.innerHeight / 2) {
+                        current = sections[i];
+                    }
+                }
+            }
+            setActiveSection(current);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
@@ -11,6 +35,30 @@ function Home() {
 
     return (
         <div className="new-portfolio-layout">
+            {/* Right Side Scroll Navigation */}
+            <div className="scroll-nav">
+                {[
+                    { id: 'hero', title: '메인', subtitle: 'Main' },
+                    { id: 'about', title: '내 소개', subtitle: 'About' },
+                    { id: 'skills', title: '경험해본 기술', subtitle: 'Tech Stack' },
+                    { id: 'archiving', title: '아카이빙', subtitle: 'Archive' },
+                    { id: 'projects', title: '프로젝트', subtitle: 'Projects' },
+                    { id: 'career', title: '약력', subtitle: 'Experience' },
+                ].map((item) => (
+                    <div
+                        key={item.id}
+                        className={`scroll-nav-item ${activeSection === item.id ? 'active' : ''}`}
+                        onClick={() => scrollToSection(item.id)}
+                    >
+                        <div className="scroll-nav-text">
+                            <span className="scroll-nav-title">{item.title}</span>
+                            <span className="scroll-nav-subtitle">{item.subtitle}</span>
+                        </div>
+                        <div className="scroll-nav-dot"></div>
+                    </div>
+                ))}
+            </div>
+
             {/* 1. Hero Section */}
             <section className="hero-section flex-center" id="hero">
                 <div className="hero-content text-center">
@@ -72,7 +120,7 @@ function Home() {
                             <GraduationCap className="about-icon" />
                             <div className="about-info">
                                 <span className="about-label">최종학력</span>
-                                <span className="about-value">대전대학교<br />(컴퓨터공학)</span>
+                                <span className="about-value">대전대학교<br />(컴퓨터공학과)</span>
                             </div>
                         </div>
                     </div>
@@ -179,37 +227,71 @@ function Home() {
             </section>
 
 
-            {/* 6. CAREER Section */}
+            {/* 6. EXPERIENCE Section */}
             <section className="page-section bg-light border-top" id="career">
                 <div className="container">
-                    <h2 className="section-title text-center"><Link2 className="title-icon" /> CAREER</h2>
+                    <h2 className="section-title text-center"><Link2 className="title-icon" /> EXPERIENCE</h2>
 
-                    <div className="career-container mt-xl">
-                        <div className="career-item flex-start gap-md border-left">
-                            <div className="career-logo" style={{ position: 'relative', left: '-50px' }}>
-                                <div className="logo-circle bg-white shadow flex-center font-bold" style={{ width: '100px', height: '100px', borderRadius: '50%', border: '1px solid var(--border-color)' }}>LOGO</div>
+                    <div className="career-container mt-xl" style={{ borderLeft: '3px solid #333', paddingLeft: '3rem', position: 'relative' }}>
+
+                        {/* 5. SW 서포터즈 */}
+                        <div className="career-item flex-start gap-md" style={{ marginBottom: '3rem' }}>
+                            <div className="career-logo" style={{ position: 'absolute', left: '-11px', top: '5px' }}>
+                                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: 'white', border: '4px solid #F1694B' }}></div>
                             </div>
-                            <div className="career-content card" style={{ flex: 1, paddingLeft: '2rem' }}>
-                                <h3 className="career-company h2 font-bold mb-xs">(주) 회사이름 1</h3>
-                                <p className="career-date text-muted mb-md">2024.01 - 재직중</p>
-                                <p className="career-desc text-secondary mb-md">회사 소개 또는 비전 문구</p>
-                                <div className="career-tags mb-xl">
-                                    <span className="skill-tag bg-dark text-white">Frontend 개발</span>
-                                </div>
-                                <div className="career-history">
-                                    <div className="history-item mt-md border-left pl-md">
-                                        <h4 className="history-title h3 font-bold mb-xs">주요 업무 타이틀 1</h4>
-                                        <p className="history-date text-muted mb-xs" style={{ fontSize: '0.9rem' }}>2024년 상반기</p>
-                                        <p className="history-desc text-secondary">업무 상세 내용 테스트 문구 작성란</p>
-                                    </div>
-                                    <div className="history-item mt-lg border-left pl-md">
-                                        <h4 className="history-title h3 font-bold mb-xs">주요 업무 타이틀 2</h4>
-                                        <p className="history-date text-muted mb-xs" style={{ fontSize: '0.9rem' }}>2024년 하반기</p>
-                                        <p className="history-desc text-secondary">성능 파이프라인 구축 및 최적화 업무</p>
-                                    </div>
-                                </div>
+                            <div className="career-content card" style={{ flex: 1, padding: '2rem' }}>
+                                <h3 className="career-company h3 font-bold mb-xs">SW 중심대학 사업단 서포터즈 2기</h3>
+                                <p className="career-date text-muted mb-0">2026.03 - 진행 중</p>
                             </div>
                         </div>
+
+                        {/* 4. AIONE Lab */}
+                        <div className="career-item flex-start gap-md" style={{ marginBottom: '3rem' }}>
+                            <div className="career-logo" style={{ position: 'absolute', left: '-11px', top: '5px' }}>
+                                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: 'white', border: '4px solid #F1694B' }}></div>
+                            </div>
+                            <div className="career-content card" style={{ flex: 1, padding: '2rem' }}>
+                                <h3 className="career-company h3 font-bold mb-xs">대전대학교 AIONE Lab</h3>
+                                <p className="career-date text-muted mb-md">2025.03 - 진행 중</p>
+                                <p className="career-desc text-secondary mb-0">Lab Leader (2026.01 - 진행 중)</p>
+                            </div>
+                        </div>
+
+                        {/* 2. 해병대 */}
+                        <div className="career-item flex-start gap-md" style={{ marginBottom: '3rem' }}>
+                            <div className="career-logo" style={{ position: 'absolute', left: '-11px', top: '5px' }}>
+                                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: 'white', border: '4px solid #F1694B' }}></div>
+                            </div>
+                            <div className="career-content card" style={{ flex: 1, padding: '2rem' }}>
+                                <h3 className="career-company h3 font-bold mb-xs">대한민국 해병대</h3>
+                                <p className="career-date text-muted mb-md">2023.02 - 2024.07</p>
+                                <p className="career-desc text-secondary mb-0">병장 만기 조기전역</p>
+                            </div>
+                        </div>
+
+                        {/* 3. 대전대학교 */}
+                        <div className="career-item flex-start gap-md" style={{ marginBottom: '3rem' }}>
+                            <div className="career-logo" style={{ position: 'absolute', left: '-11px', top: '5px' }}>
+                                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: 'white', border: '4px solid #F1694B' }}></div>
+                            </div>
+                            <div className="career-content card" style={{ flex: 1, padding: '2rem' }}>
+                                <h3 className="career-company h3 font-bold mb-xs">대전대학교 컴퓨터공학과</h3>
+                                <p className="career-date text-muted mb-0">2022.03 - 진행 중</p>
+                            </div>
+                        </div>
+
+                        {/* 1. 밀양고등학교 */}
+                        <div className="career-item flex-start gap-md" style={{ marginBottom: '0' }}>
+                            <div className="career-logo" style={{ position: 'absolute', left: '-11px', top: '5px' }}>
+                                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: 'white', border: '4px solid #F1694B' }}></div>
+                            </div>
+                            <div className="career-content card" style={{ flex: 1, padding: '2rem' }}>
+                                <h3 className="career-company h3 font-bold mb-xs">밀양고등학교</h3>
+                                <p className="career-date text-muted mb-md">2019.03 - 2022.02</p>
+                                <p className="career-desc text-secondary mb-0">졸업</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
