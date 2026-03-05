@@ -14,10 +14,11 @@ function Home() {
             {/* 1. Hero Section */}
             <section className="hero-section flex-center" id="hero">
                 <div className="hero-content text-center">
-                    <h1 className="hero-title">- 오창현 -<br />프론트 엔드 개발자 포트폴리오</h1>
+                    <h1 className="hero-title">- 오창현 -<br />개발자가 되고 싶은
+                        포트폴리오</h1>
                     <div className="hero-subtitle">
                         <p>안녕하세요.</p>
-                        <p>본질에 집중하는 프론트 엔드 개발자<br />오창현입니다.</p>
+                        <p>자기소개란<br />오창현입니다.</p>
                     </div>
                     <button className="hero-btn mt-lg" onClick={() => scrollToSection('about')}>
                         더 알아보기 <ChevronDown size={18} style={{ display: 'inline', verticalAlign: 'middle', marginLeft: '4px' }} />
@@ -41,35 +42,35 @@ function Home() {
                             <Calendar className="about-icon" />
                             <div className="about-info">
                                 <span className="about-label">생년월일</span>
-                                <span className="about-value">90.01.01</span>
+                                <span className="about-value">03.05.26</span>
                             </div>
                         </div>
                         <div className="about-item flex-center">
                             <MapPin className="about-icon" />
                             <div className="about-info">
                                 <span className="about-label">위치</span>
-                                <span className="about-value">서울특별시 관악구</span>
+                                <span className="about-value">대전광역시 / 밀양시</span>
                             </div>
                         </div>
                         <div className="about-item flex-center">
                             <Phone className="about-icon" />
                             <div className="about-info">
                                 <span className="about-label">연락처</span>
-                                <span className="about-value">010-1234-5678</span>
+                                <span className="about-value">010-9347-7906</span>
                             </div>
                         </div>
                         <div className="about-item flex-center">
                             <Mail className="about-icon" />
                             <div className="about-info">
                                 <span className="about-label">이메일</span>
-                                <span className="about-value">test@email.com</span>
+                                <span className="about-value">och7905@naver.com</span>
                             </div>
                         </div>
                         <div className="about-item flex-center">
                             <GraduationCap className="about-icon" />
                             <div className="about-info">
                                 <span className="about-label">학력</span>
-                                <span className="about-value">대학교<br />(컴퓨터공학)</span>
+                                <span className="about-value">대전대학교<br />(컴퓨터공학)</span>
                             </div>
                         </div>
                     </div>
@@ -84,33 +85,33 @@ function Home() {
                         <div className="skill-row border-bottom flex-center">
                             <div className="skill-category">Language</div>
                             <div className="skill-tags">
-                                <span className="skill-tag" style={{ backgroundColor: '#3178C6', color: 'white' }}>TypeScript</span>
-                                <span className="skill-tag" style={{ backgroundColor: '#F7DF1E', color: 'black' }}>JavaScript</span>
-                                <span className="skill-tag" style={{ backgroundColor: '#3776AB', color: 'white' }}>Python</span>
+                                <span className="skill-tag" style={{ backgroundColor: '#3178C6', color: 'white' }}>테스트 언어 1</span>
+                                <span className="skill-tag" style={{ backgroundColor: '#F7DF1E', color: 'black' }}>테스트 언어 2</span>
+                                <span className="skill-tag" style={{ backgroundColor: '#3776AB', color: 'white' }}>테스트 언어 3</span>
                             </div>
                         </div>
                         <div className="skill-row border-bottom flex-center">
                             <div className="skill-category">Frontend</div>
                             <div className="skill-tags">
-                                <span className="skill-tag bg-dark text-white">Next.js / React</span>
-                                <span className="skill-tag bg-gray text-white">Zustand</span>
-                                <span className="skill-tag" style={{ backgroundColor: '#3578E5', color: 'white' }}>Recoil</span>
-                                <span className="skill-tag" style={{ backgroundColor: '#FF4154', color: 'white' }}>React-Query</span>
-                                <span className="skill-tag" style={{ backgroundColor: '#38B2AC', color: 'white' }}>Tailwind CSS</span>
+                                <span className="skill-tag bg-dark text-white">프론트 테스트 1</span>
+                                <span className="skill-tag bg-gray text-white">프론트 테스트 2</span>
+                                <span className="skill-tag" style={{ backgroundColor: '#3578E5', color: 'white' }}>프론트 테스트 3</span>
+                                <span className="skill-tag" style={{ backgroundColor: '#FF4154', color: 'white' }}>프론트 테스트 4</span>
+                                <span className="skill-tag" style={{ backgroundColor: '#38B2AC', color: 'white' }}>프론트 테스트 5</span>
                             </div>
                         </div>
                         <div className="skill-row border-bottom flex-center">
                             <div className="skill-category">Backend</div>
                             <div className="skill-tags">
-                                <span className="skill-tag" style={{ backgroundColor: '#092E20', color: 'white' }}>Django</span>
-                                <span className="skill-tag" style={{ backgroundColor: '#6DB33F', color: 'white' }}>Spring (Boot)</span>
+                                <span className="skill-tag" style={{ backgroundColor: '#092E20', color: 'white' }}>백엔드 테스트 1</span>
+                                <span className="skill-tag" style={{ backgroundColor: '#6DB33F', color: 'white' }}>백엔드 테스트 2</span>
                             </div>
                         </div>
                         <div className="skill-row flex-center border-none">
                             <div className="skill-category">DevOps</div>
                             <div className="skill-tags">
-                                <span className="skill-tag" style={{ backgroundColor: '#2496ED', color: 'white' }}>Docker</span>
-                                <span className="skill-tag" style={{ backgroundColor: '#FF9900', color: 'white' }}>AWS (ECS, EC2)</span>
+                                <span className="skill-tag" style={{ backgroundColor: '#2496ED', color: 'white' }}>데브옵스 1</span>
+                                <span className="skill-tag" style={{ backgroundColor: '#FF9900', color: 'white' }}>데브옵스 2</span>
                             </div>
                         </div>
                     </div>
