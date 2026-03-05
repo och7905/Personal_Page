@@ -9,8 +9,7 @@ import Contact from './pages/Contact';
 function App() {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-            <Navbar />
-            <main style={{ flex: 1, paddingTop: '70px' }}>
+            <main style={{ flex: 1, paddingTop: '0px' }}>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />

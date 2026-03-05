@@ -77,7 +77,42 @@ function Home() {
                 </div>
             </section>
 
-            {/* 3. SKILLS Section */}
+            {/* 3. CAREER Section */}
+            <section className="page-section bg-light border-top" id="career">
+                <div className="container">
+                    <h2 className="section-title text-center"><Link2 className="title-icon" /> CAREER</h2>
+
+                    <div className="career-container mt-xl">
+                        <div className="career-item flex-start gap-md border-left">
+                            <div className="career-logo" style={{ position: 'relative', left: '-50px' }}>
+                                <div className="logo-circle bg-white shadow flex-center font-bold" style={{ width: '100px', height: '100px', borderRadius: '50%', border: '1px solid var(--border-color)' }}>LOGO</div>
+                            </div>
+                            <div className="career-content card" style={{ flex: 1, paddingLeft: '2rem' }}>
+                                <h3 className="career-company h2 font-bold mb-xs">(주) 회사이름 1</h3>
+                                <p className="career-date text-muted mb-md">2024.01 - 재직중</p>
+                                <p className="career-desc text-secondary mb-md">회사 소개 또는 비전 문구</p>
+                                <div className="career-tags mb-xl">
+                                    <span className="skill-tag bg-dark text-white">Frontend 개발</span>
+                                </div>
+                                <div className="career-history">
+                                    <div className="history-item mt-md border-left pl-md">
+                                        <h4 className="history-title h3 font-bold mb-xs">주요 업무 타이틀 1</h4>
+                                        <p className="history-date text-muted mb-xs" style={{ fontSize: '0.9rem' }}>2024년 상반기</p>
+                                        <p className="history-desc text-secondary">업무 상세 내용 테스트 문구 작성란</p>
+                                    </div>
+                                    <div className="history-item mt-lg border-left pl-md">
+                                        <h4 className="history-title h3 font-bold mb-xs">주요 업무 타이틀 2</h4>
+                                        <p className="history-date text-muted mb-xs" style={{ fontSize: '0.9rem' }}>2024년 하반기</p>
+                                        <p className="history-desc text-secondary">성능 파이프라인 구축 및 최적화 업무</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 4. SKILLS Section */}
             <section className="page-section bg-yellow" id="skills">
                 <div className="container">
                     <h2 className="section-title text-center"><Link2 className="title-icon" /> SKILLS</h2>
@@ -118,7 +153,7 @@ function Home() {
                 </div>
             </section>
 
-            {/* 4. ARCHIVING Section */}
+            {/* 5. ARCHIVING Section */}
             <section className="page-section bg-dark text-white" id="archiving">
                 <div className="container">
                     <h2 className="section-title text-center text-white"><Link2 className="title-icon text-white" /> ARCHIVING</h2>
@@ -137,7 +172,7 @@ function Home() {
                 </div>
             </section>
 
-            {/* 5. PROJECTS Section */}
+            {/* 6. PROJECTS Section */}
             <section className="page-section bg-light" id="projects">
                 <div className="container">
                     <h2 className="section-title text-center"><Link2 className="title-icon" /> PROJECTS</h2>
@@ -171,40 +206,6 @@ function Home() {
                 </div>
             </section>
 
-            {/* 6. CAREER Section */}
-            <section className="page-section bg-light border-top" id="career">
-                <div className="container">
-                    <h2 className="section-title text-center"><Link2 className="title-icon" /> CAREER</h2>
-
-                    <div className="career-container mt-xl">
-                        <div className="career-item flex-start gap-md border-left">
-                            <div className="career-logo" style={{ position: 'relative', left: '-50px' }}>
-                                <div className="logo-circle bg-white shadow flex-center font-bold" style={{ width: '100px', height: '100px', borderRadius: '50%', border: '1px solid var(--border-color)' }}>LOGO</div>
-                            </div>
-                            <div className="career-content card" style={{ flex: 1, paddingLeft: '2rem' }}>
-                                <h3 className="career-company h2 font-bold mb-xs">(주) 회사이름 1</h3>
-                                <p className="career-date text-muted mb-md">2024.01 - 재직중</p>
-                                <p className="career-desc text-secondary mb-md">회사 소개 또는 비전 문구</p>
-                                <div className="career-tags mb-xl">
-                                    <span className="skill-tag bg-dark text-white">Frontend 개발</span>
-                                </div>
-                                <div className="career-history">
-                                    <div className="history-item mt-md border-left pl-md">
-                                        <h4 className="history-title h3 font-bold mb-xs">주요 업무 타이틀 1</h4>
-                                        <p className="history-date text-muted mb-xs" style={{ fontSize: '0.9rem' }}>2024년 상반기</p>
-                                        <p className="history-desc text-secondary">업무 상세 내용 테스트 문구 작성란</p>
-                                    </div>
-                                    <div className="history-item mt-lg border-left pl-md">
-                                        <h4 className="history-title h3 font-bold mb-xs">주요 업무 타이틀 2</h4>
-                                        <p className="history-date text-muted mb-xs" style={{ fontSize: '0.9rem' }}>2024년 하반기</p>
-                                        <p className="history-desc text-secondary">성능 파이프라인 구축 및 최적화 업무</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Scroll Top Button */}
             <button className="scroll-top-btn shadow bg-white" onClick={() => scrollToSection('hero')} style={{ position: 'fixed', bottom: '30px', right: '30px', width: '50px', height: '50px', borderRadius: '8px', border: '1px solid var(--border-color)', cursor: 'pointer', zIndex: 100 }}>
