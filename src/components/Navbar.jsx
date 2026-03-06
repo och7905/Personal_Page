@@ -102,8 +102,6 @@ function Navbar() {
                             <span onClick={() => setLanguage('kr')} style={{ cursor: 'pointer', color: language === 'kr' ? (isTransparent ? '#FFF' : 'var(--text-primary)') : 'inherit' }}>KR</span>
                             <span style={{ opacity: 0.5 }}>|</span>
                             <span onClick={() => setLanguage('en')} style={{ cursor: 'pointer', color: language === 'en' ? (isTransparent ? '#FFF' : 'var(--text-primary)') : 'inherit' }}>EN</span>
-                            <span style={{ opacity: 0.5 }}>|</span>
-                            <span onClick={() => setLanguage('jp')} style={{ cursor: 'pointer', color: language === 'jp' ? (isTransparent ? '#FFF' : 'var(--text-primary)') : 'inherit' }}>JP</span>
                         </div>
                     </div>
                 </div>
@@ -164,8 +162,6 @@ function Navbar() {
                                 <span onClick={() => setLanguage('kr')} style={{ cursor: 'pointer', color: language === 'kr' ? 'var(--text-primary)' : 'inherit' }}>KR</span>
                                 <span>|</span>
                                 <span onClick={() => setLanguage('en')} style={{ cursor: 'pointer', color: language === 'en' ? 'var(--text-primary)' : 'inherit' }}>EN</span>
-                                <span>|</span>
-                                <span onClick={() => setLanguage('jp')} style={{ cursor: 'pointer', color: language === 'jp' ? 'var(--text-primary)' : 'inherit' }}>JP</span>
                             </div>
                         </div>
                     </div>

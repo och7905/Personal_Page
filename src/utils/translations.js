@@ -26,7 +26,7 @@ export const translations = {
             email_label: '이메일',
             email_value: 'och7905@naver.com',
             edu_label: '최종학력',
-            edu_value: '대전대학교<br />(컴퓨터공학과)'
+            edu_value: '대전대학교<br />(컴퓨터공학과) - 재학 중'
         },
         skills: {
             title: 'SKILLS',
@@ -71,7 +71,7 @@ export const translations = {
             item4_desc: 'Lab Leader (2026.01 - 진행 중)',
             item3_title: '대한민국 해병대',
             item3_date: '2023.02 - 2024.07',
-            item3_desc: '병장 만기 조기전역',
+            item3_desc: '병장 만기 전역',
             item2_title: '대전대학교 컴퓨터공학과',
             item2_date: '2022.03 - 진행 중',
             item1_title: '밀양고등학교',
@@ -114,7 +114,7 @@ export const translations = {
             email_label: 'Email',
             email_value: 'och7905@naver.com',
             edu_label: 'Education',
-            edu_value: 'Daejeon University<br />(Computer Engineering)'
+            edu_value: 'Daejeon University<br />(Computer Engineering) - Currently Enrolled'
         },
         skills: {
             title: 'SKILLS',
@@ -202,7 +202,7 @@ export const translations = {
             email_label: 'メール',
             email_value: 'och7905@naver.com',
             edu_label: '最終学歴',
-            edu_value: '大田大学校<br />(コンピュータ工学科)'
+            edu_value: '大田大学校<br />(コンピュータ工学科) - 在学中'
         },
         skills: {
             title: 'SKILLS',
@@ -247,7 +247,7 @@ export const translations = {
             item4_desc: 'Lab Leader (2026.01 - 進行中)',
             item3_title: '大韓民国海兵隊',
             item3_date: '2023.02 - 2024.07',
-            item3_desc: '兵長 満期早期除隊',
+            item3_desc: '兵長 満期除隊',
             item2_title: '大田大学校 コンピュータ工学科',
             item2_date: '2022.03 - 進行中',
             item1_title: '密陽高等学校',
