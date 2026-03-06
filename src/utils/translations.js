@@ -26,7 +26,8 @@ export const translations = {
             email_label: '이메일',
             email_value: 'och7905@naver.com',
             edu_label: '최종학력',
-            edu_value: '대전대학교<br />(컴퓨터공학과) - 재학 중'
+            edu_value: '대전대학교<br />(컴퓨터공학과) - 재학 중',
+            cv_button: 'CV 다운로드'
         },
         skills: {
             title: 'SKILLS',
@@ -114,7 +115,8 @@ export const translations = {
             email_label: 'Email',
             email_value: 'och7905@naver.com',
             edu_label: 'Education',
-            edu_value: 'Daejeon University<br />(Computer Engineering) - Currently Enrolled'
+            edu_value: 'Daejeon University<br />(Computer Engineering) - Currently Enrolled',
+            cv_button: 'Download CV'
         },
         skills: {
             title: 'SKILLS',
@@ -202,7 +204,8 @@ export const translations = {
             email_label: 'メール',
             email_value: 'och7905@naver.com',
             edu_label: '最終学歴',
-            edu_value: '大田大学校<br />(コンピュータ工学科) - 在学中'
+            edu_value: '大田大学校<br />(コンピュータ工学科) - 在学中',
+            cv_button: 'CVダウンロード'
         },
         skills: {
             title: 'SKILLS',

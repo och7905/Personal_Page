@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { User, Calendar, MapPin, Phone, Mail, GraduationCap, Link2, ChevronDown, ArrowUp, Github, BookOpen } from 'lucide-react';
+import { User, Calendar, MapPin, Phone, Mail, GraduationCap, Link2, ChevronDown, ArrowUp, Github, BookOpen, Download } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 function Home() {
@@ -119,6 +119,24 @@ function Home() {
                                 <span className="about-value" dangerouslySetInnerHTML={{ __html: t('about.edu_value') }} />
                             </div>
                         </div>
+                    </div>
+                    <div className="flex-center mt-xl">
+                        <a
+                            href="/cv.pdf"
+                            download
+                            className="hero-btn"
+                            style={{
+                                textDecoration: 'none',
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                padding: '12px 32px',
+                                fontSize: '1rem'
+                            }}
+                        >
+                            <Download size={20} />
+                            {t('about.cv_button')}
+                        </a>
                     </div>
                 </div>
             </section>
